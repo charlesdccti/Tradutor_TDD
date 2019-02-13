@@ -22,4 +22,9 @@ public class Tradutor {
 		return traducoes.get(palavra);
 	}
 
+	public Object traduzirFrase(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

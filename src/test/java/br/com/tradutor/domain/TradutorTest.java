@@ -45,5 +45,12 @@ public class TradutorTest {
 	
 	/* Achou que não necessário Refatoracao para o Test duas traducoes para a mesma palavra [Chapéu Azul do TDD] */
 	
+	@Test
+	public void traduzirFrase() {
+		t.adicionaTraducao("guerra", "war");
+		t.adicionaTraducao("é", "is");
+		t.adicionaTraducao("bad", "ruim");
+		assertEquals("war is bad", t.traduzirFrase("guerra é ruim"));
+	}
 	
 }
