@@ -41,6 +41,9 @@ public class TradutorTest {
 		t.adicionaTraducao("bom", "good");
 		t.adicionaTraducao("bom", "nice");
 		assertEquals("good, nice", t.traduzir("bom"));
-	}
-
+	}	
+	
+	/* Achou que não necessário Refatoracao para o Test duas traducoes para a mesma palavra [Chapéu Azul do TDD] */
+	
+	
 }
