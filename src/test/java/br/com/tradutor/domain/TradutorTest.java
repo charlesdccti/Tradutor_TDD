@@ -52,5 +52,5 @@ public class TradutorTest {
 		t.adicionaTraducao("ruim", "bad");
 		assertEquals("war is bad", t.traduzirFrase("guerra é ruim"));
 	}
-	
+	/*	Achou que não foi necessário fazer a "refatoracao" para o "Test traduzir frase"  [Chapéu Azul do TDD] */
 }
