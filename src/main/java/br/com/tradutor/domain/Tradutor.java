@@ -12,6 +12,9 @@ public class Tradutor {
 	}
 
 	public void adicionaTraducao(String palavra, String traducao) {
+		if(traducoes.containsKey(palavra)) {
+			traducao = traduzir(palavra)+", "+traducao;
+		}
 		this.traducoes.put(palavra, traducao);
 	}
 
