@@ -14,13 +14,11 @@ public class TradutorTest {
 	@Before
 	public void criarTradutor() {
 		t = new Tradutor();
-		System.out.println("before");
 	}
 	
 	@Test
 	public void tradutorSemPalavra() {
 		assertTrue(t.estaVazio());
-		System.out.println("test 01");
 	}
 
 	@Test
@@ -28,8 +26,14 @@ public class TradutorTest {
 		t.adicionaTraducao("bom", "good");
 		assertFalse(t.estaVazio());
 		assertEquals("good", t.traduzir("bom"));
-		System.out.println("test 02");
 	}
 	
+	@Test
+	public void duasTraducao() {
+		t.adicionaTraducao("bom", "good");
+		t.adicionaTraducao("mau", "bad");
+		assertEquals("good", t.traduzir("bom"));
+		assertEquals("bad", t.traduzir("mau"));
+	}
 
 }
