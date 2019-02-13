@@ -53,4 +53,17 @@ public class TradutorTest {
 		assertEquals("war is bad", t.traduzirFrase("guerra é ruim"));
 	}
 	/*	Achou que não foi necessário fazer a "refatoracao" para o "Test traduzir frase"  [Chapéu Azul do TDD] */
+	
+	@Test
+	public void traduzirFraseComDuasTraducoesMesmaPalavra() {
+		t.adicionaTraducao("paz", "peace");
+		t.adicionaTraducao("é", "is");
+		t.adicionaTraducao("bom", "good");
+		t.adicionaTraducao("bom", "nice");
+		assertEquals("peace is good", t.traduzirFrase("paz é bom"));
+	}
+	
+	
+	
+	
 }
