@@ -49,7 +49,7 @@ public class TradutorTest {
 	public void traduzirFrase() {
 		t.adicionaTraducao("guerra", "war");
 		t.adicionaTraducao("é", "is");
-		t.adicionaTraducao("bad", "ruim");
+		t.adicionaTraducao("ruim", "bad");
 		assertEquals("war is bad", t.traduzirFrase("guerra é ruim"));
 	}
 	

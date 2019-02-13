@@ -1,6 +1,7 @@
 package br.com.tradutor.domain;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Tradutor {
@@ -22,9 +23,14 @@ public class Tradutor {
 		return traducoes.get(palavra);
 	}
 
-	public Object traduzirFrase(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public String traduzirFrase(String frase) {
+		String[] palavras = frase.split(" ");
+		String fraseTraduzida = "";
+		for (String palavra : palavras) {
+			String traducao = traduzir(palavra);
+			fraseTraduzida += " " + traducao;
+		}
+		return fraseTraduzida.trim();
 	}
 
 }
